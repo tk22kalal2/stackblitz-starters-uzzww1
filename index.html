@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MBBS Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div id="setup-container" class="setup-container">
+        <h1>MBBS Quiz Setup</h1>
+        <div class="setup-form">
+            <div class="form-group">
+                <label for="subject-select">Select Subject:</label>
+                <select id="subject-select" required>
+                    <option value="">Choose a subject...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time-select">Select Time Limit:</label>
+                <select id="time-select" required>
+                    <option value="0">No time limit</option>
+                    <option value="40">40 seconds</option>
+                    <option value="60">60 seconds</option>
+                </select>
+            </div>
+            <button id="start-quiz-btn">Start Quiz</button>
+        </div>
+    </div>
+
+    <div id="quiz-container" class="quiz-container hidden">
+        <h1>MBBS Quiz</h1>
+        <div id="timer" class="timer"></div>
+        <div id="loader" class="hidden">Loading...</div>
+        <div id="quiz-content">
+            <div id="question-container">
+                <p id="question-text"></p>
+            </div>
+            <div id="options-container"></div>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </div>
+        <div id="score-container" class="hidden">
+            <h2>Quiz Complete!</h2>
+            <p>Your score: <span id="score">0</span></p>
+            <button id="restart-btn">New Quiz</button>
+        </div>
+    </div>
+</body>
+</html>
